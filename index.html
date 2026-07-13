@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>釣果カウンター</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="釣果カウンター">
+<meta name="theme-color" content="#0e2027">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="header">
+    <div class="eyebrow">Angler's Log · オフライン対応</div>
+    <div class="title">釣果カウンター</div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num" id="todayCount">0</div>
+        <div class="stat-label">本日の釣果</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" id="totalCount">0</div>
+        <div class="stat-label">累計釣果</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app"></div>
+
+  <div class="fab-wrap">
+    <button id="mainBtn" class="fab">釣れた!</button>
+  </div>
+</div>
+
+<div id="modalOverlay" class="modal-overlay" hidden>
+  <div class="modal">
+    <div class="modal-title">新しいセッション</div>
+    <div class="modal-sub">今回の釣りに名前をつけてください</div>
+    <input id="sessionNameInput" class="modal-input" type="text" placeholder="例: 朝マズメ・堤防西側" maxlength="40">
+    <div class="modal-actions">
+      <button id="modalCancel" class="modal-btn ghost">キャンセル</button>
+      <button id="modalStart" class="modal-btn primary">開始する</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
