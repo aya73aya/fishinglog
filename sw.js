@@ -1,4 +1,4 @@
-const CACHE_NAME = "fishlog-v6";
+const CACHE_NAME = "fishlog-v7";
 const ASSETS = [
   "./",
   "./index.html",

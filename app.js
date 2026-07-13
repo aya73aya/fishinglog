@@ -596,11 +596,11 @@ function logCatch(session) {
 
 function openModal() {
   sessionNameInput.value = "";
-  modalOverlay.hidden = false;
+  modalOverlay.classList.add("open");
   setTimeout(() => sessionNameInput.focus(), 50);
 }
 function closeModal() {
-  modalOverlay.hidden = true;
+  modalOverlay.classList.remove("open");
 }
 function startSession() {
   const name = sessionNameInput.value.trim() || `セッション ${new Date().toLocaleDateString("ja-JP", { month: "numeric", day: "numeric" })}`;
