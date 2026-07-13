@@ -1,4 +1,4 @@
-const CACHE_NAME = "fishlog-v5";
+const CACHE_NAME = "fishlog-v6";
 const ASSETS = [
   "./",
   "./index.html",
@@ -7,6 +7,7 @@ const ASSETS = [
   "./manifest.json",
   "./icon-192.png",
   "./icon-512.png",
+  "./robots.txt",
 ];
 
 self.addEventListener("install", (event) => {
